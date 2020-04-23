@@ -31,7 +31,7 @@
 
 	function runEach(evt){
 		var elem = evt.target;
-		if (!matches(elem, '.script .block')) return;
+		if (!elem.matches('.script .block')) return;
 		if (elem.dataset.name === 'Define block') return;
 		elem.classList.add('running');
 		scriptRegistry[elem.dataset.name](elem);
