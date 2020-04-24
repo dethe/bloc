@@ -14,7 +14,7 @@
     }
 
     function scriptToJson(){
-        var blocks = [].slice.call(document.querySelectorAll('.script > .block'));
+        var blocks = Array.from(document.querySelectorAll('.script > .block'));
         return blocks.length ? JSON.stringify(blocks.map(Block.script)) : null;
     }
 
@@ -29,7 +29,7 @@
     function restoreLocal(){ jsonToScript(localStorage[title] || '[]' ); }
 
     function clearScript(){
-        [].slice.call(document.querySelectorAll('.script > .block')).forEach(function(block){
+        Array.from(document.querySelectorAll('.script > .block')).forEach(function(block){
             block.parentElement.removeChild(block);
         });
         Menu.runSoon();

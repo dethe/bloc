@@ -18,7 +18,7 @@
 
 	function blockContents(block){
 		var container = block.querySelector('.container');
-		return container ? [].slice.call(container.children) : null;
+		return container ? Array.from(container.children) : null;
 	}
 
 	function blockValue(block){

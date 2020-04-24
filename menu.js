@@ -19,7 +19,7 @@
 		if (scriptDirty){
 			scriptDirty = false;
 			Block.trigger('beforeRun', script);
-			var blocks = [].slice.call(document.querySelectorAll('.script > .block'));
+			var blocks = Array.from(document.querySelectorAll('.script > .block'));
 			Block.run(blocks);
 			Block.trigger('afterRun', script);
 		}else{
