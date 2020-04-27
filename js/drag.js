@@ -4,7 +4,6 @@ let drake = dragula({
     return el.matches(".menu, .script, .script .container");
   },
   moves: function (el, source, handle, sibling) {
-    console.log("moves: %s", el.matches(".block"));
     return el.matches(".block");
   },
   accepts: function (el, target, source, sibling) {
